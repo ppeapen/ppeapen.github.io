@@ -1,0 +1,25 @@
+.fnoteref {
+	position: relative;
+	top: -0.5em;
+	font-size: 60%;
+	padding: 2px;
+	text-decoration: underline;
+}
+.ftip {
+	font-size: 1.1rem;
+	border: 1px solid #ee4f06;
+	background-color: #070707;
+	color: #fcf6cf;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.footnote {
+	font-size: 21px;
+	line-height: 1.4rem;
+	padding-left: 1.8em;
+	text-indent: -1.8em;
+	margin-top: 1rem;
+  	margin-bottom: 1rem;
+}

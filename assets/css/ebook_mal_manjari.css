@@ -1,0 +1,660 @@
+/* Optional import from SMC; currently linked to self-hosted fonts
+@import url('https://smc.org.in/fonts/manjari.css');
+@import url('https://smc.org.in/fonts/dyuthi.css');
+@import url('https://smc.org.in/fonts/keraleeyam.css');
+@import url('https://smc.org.in/fonts/chilanka.css');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+	font-family: 'Manjari';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url(../fonts/Manjari-Regular.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+0D01-0D7F, U+200C-U+200D, U+25CC;
+}
+
+/* Manjari Bold*/
+@font-face {
+	font-family: 'Manjari';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url(../fonts/Manjari-Bold.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+0D01-0D7F, U+200C-U+200D, U+25CC;
+}
+/* Manjari Thin*/
+@font-face {
+	font-family: 'Manjari';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100;
+	src: url(../fonts/Manjari-Thin.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+0D01-0D7F, U+200C-U+200D, U+25CC;
+}
+
+:root {
+  --paragraph-margins: 0.9rem 0rem 0.9rem 0rem;
+  --paragraph-margins-first: 1rem 0rem 0.7rem 0rem;
+  --paragraph-margins-last: 0.7rem 0rem 8rem 0rem;
+  --heading-margins-h1: 2rem 0rem 3rem 0rem;
+  --heading-margins: 2rem 0rem 0.5rem 0rem;
+  --table-margins: 1rem auto 1.5rem auto;
+  --list-margins: 0.5rem 0rem 1rem 0rem;
+  --list-nested-margins: 0rem 0rem 1rem 0rem;
+  --paraline-height: 1.63rem;
+  --paragraph-line-height: 1.63em;
+  --paraquote-line-height: 1.4rem;
+  --paratext-indent: 1.9rem;
+}
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+	font-size: 19.5px;
+  scroll-padding-top: 55px; /*height of sticky header*/  
+}
+/* Hyperlink colors for Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body a:link {
+    color: #f5610b;
+  }
+  body a:visited {
+    color: #f50b78;
+  }
+}
+/*-ELEMENTS THAT DIFFER-*/
+body {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  /*background: rgb(240, 240, 235);
+  color: #121212; */
+  font-family: "Manjari", sans-serif;
+}
+a:link {
+  color: #0615c7;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #ca118d;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #e3313d;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: #ff0000;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.redletter {
+  color: #d40000ff;
+}
+.highlight {
+  color: rgb(114, 5, 5);
+  background-color: rgb(254, 255, 209);
+}
+.colorfont1 {
+  color: rgba(211, 9, 103, 0.822);
+}
+.colorfont2 {
+  color: rgba(7, 25, 189, 0.822);
+}
+.borderbottom {
+  border-bottom: 1px solid black;
+}
+
+/*To avoid numbering of Table of Contents*/
+/*If TOC has class=content-list; */
+/*and IF each list (ol/ul) has id=toc*/
+/*this directive should apply*/
+.content-list #toc {list-style-type: none;}
+
+/*Pagination*/
+.newpage {page-break-before: always;}
+
+/* ====Languages and Fonts==== */
+.hebrew {
+  font-family: "Bona Nova", serif;
+}
+.gk {
+  font-family: "Bona Nova", serif;
+}
+.eng {
+  font-family: 'EB Garamond', serif;
+}
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+.script {
+  font-family: "Chilanka Regular", "Chilanka", "Ezhuthu", cursive;
+}
+
+/*=========IMAGES===========*/
+a img {
+  border: 0 none;
+}
+figure {
+  max-width: 95%;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 20px 0;  
+}
+.image-link {
+  background-color: transparent;
+  background: none;
+  text-decoration: none;
+  border-bottom: none;
+}
+iframe {
+  margin: 0 auto;
+  background-color: white;
+  display: block;
+  border-style: none;
+}
+/*=====RULE=====*/
+hr {
+  width: 30%;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+h1 {
+  font-size: 2.3rem;
+  font-weight: 100; 
+  line-height: 1.3em; 
+  text-align: center; 
+  margin-top: 1em; 
+  margin-bottom: 0.5em;}
+h2 {
+  font-size: 2rem; 
+  font-weight: 100;
+  line-height: 1.3em; 
+  text-align: center; 
+  margin-top: 1em;
+  margin-bottom: 1em;}
+h3 {
+  font-size: 1.7rem; 
+  font-weight: 100;
+  line-height: 1.3em; 
+  text-align: left; 
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;}
+h4 {
+  font-size: 1.4rem; 
+  font-weight: 400;
+  line-height: 1.3em; 
+  text-align: left; 
+  margin-top: 1.2em;
+  margin-bottom: 0.2em;} 
+.title {
+  font-weight: 100;
+  font-size: 2.27rem;
+  text-align: center;
+  margin-bottom: 0.7em;
+}
+.subtitle {
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 0.7em;
+}
+.chapnum {
+  font-size:1.5rem; 
+  text-align:center;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  text-indent: 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0em;
+  margin-bottom: 0.7em;
+  text-align: justify;
+  text-indent: 1rem;
+  line-height: var(--paragraph-line-height);
+}
+.centered {
+  text-align: center;
+  text-indent: 0rem;
+}
+.noindent {
+  text-indent:0rem;
+}
+.firstpara {
+  text-indent: 0rem;
+  margin: var(--paragraph-margins-first);
+}
+.lastpara {
+  margin: var(--paragraph-margins-last);
+  text-indent: 1rem;
+}
+.indented {
+  text-align: left;
+  line-height: var(--paraquote-line-height);
+  padding-left: 1.74em;
+  padding-right: 1.13em;
+  text-indent:0rem; 
+}
+.quotation {
+  font-size: 0.94rem;
+  line-height: var(--paraquote-line-height);
+  margin-top: 0.7em;
+  margin-bottom: 0.9em;
+  padding-left: 1.74em;
+  padding-right: 1.13em;
+  text-indent:0rem;
+}
+blockquote p {
+  font-size: 0.94rem;
+  line-height: var(--paraquote-line-height);
+  margin-top: 0.7em;
+  margin-bottom: 0.9em;
+  padding-left: 1.74em;
+  padding-right: 1.13em;
+}
+.kicker {
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 2.2rem;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  text-indent:0rem;
+}
+.pullquote {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-indent:0rem;
+  line-height: 1.9rem;
+  border-top: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  background-color: rgb(235, 235, 235);
+}
+figcaption {
+  font-size: 0.9rem;
+  text-align: center;
+  margin: var(--paragraph-margins);
+  line-height: 1.4rem;
+}
+.caption {
+  font-size: 0.94rem;
+  font-style: normal;
+  text-align: center;
+  line-height: 1.3em;
+  text-indent:0rem;
+}
+.note {
+  font-size: 0.78rem;
+  font-style: normal;
+  line-height: 1.2rem;
+  margin-bottom: 0.7em;
+  text-indent:0rem;
+}
+.notes {
+  font-size: 0.78rem;
+  font-style: normal;
+  line-height: 1.5em;
+  text-indent:0rem;
+  margin-bottom: 0.7em;
+}
+.content-list {
+  font-size: 0.99rem;
+  text-align: left;
+  text-indent: 0;
+  line-height: var(--paragraph-line-height);
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  padding-left: 20px;
+}
+.content-entry {
+  padding-bottom: 0.5rem;
+}
+.publication-data {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top:4rem;
+  line-height: 1rem;
+  font-style: normal;
+  line-height: 1.4rem;
+  text-indent: 0;
+}
+.didache p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.63rem; 
+  margin-top: 0rem;
+  margin-bottom: 0.6rem;
+  padding-left: 40px;
+  text-indent: -40px;
+}
+
+.didache .didache-indent {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.63rem; 
+  margin-top: 0rem;
+  margin-bottom: 0.6rem; 
+  padding-left: 0px;
+  padding-left: 70px;
+  text-indent: -40px;
+}
+
+/*==FOOTNOTES==*/
+.footnotes {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-indent: -15px;
+  padding-left: 15px;
+  margin: 1rem 0 1rem 1rem;
+}
+.footnotes ol p {
+  font-size: 1.1rem;
+}
+.footnote {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-indent: -5%;
+  padding-left: 5%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/*==FOOTNOTE REFERENCE==*/
+.noteref {
+  font-size: 60%;
+  position: relative;
+  top: -0.5em;
+  text-decoration: none;
+}
+.footnote-ref {
+  font-size: 0.75rem;
+}
+
+/*==FOR BIBLIOGRAPHY==*/
+.hangingindent {
+  padding-left: 40px;
+  text-indent: -40px;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.6rem;
+}
+/*-----------------*/
+
+/*== CHARACTER STYLES ==*/
+
+.emphasis {
+  font-style: italic;
+}
+.smallcaps {
+	font-size: 0.95em; 
+  font-style: regular;
+  font-variant-caps: small-caps;
+  line-height: 1.4rem; /*fallback for IE*/
+  line-height: var(--paraquote-line-height);
+}
+.allsmallcaps {
+	font-size: 0.95em; 
+  font-style: regular;
+  font-variant-caps: all-small-caps;
+  line-height: 1.4rem; /*fallback for IE*/
+  line-height: var(--paraquote-line-height);
+}
+
+.backtotop {
+  font-size: 0.9em;
+  margin-bottom: 0.7em;
+  text-align: right;
+}
+.verse-num {
+  font-size: 0.6rem;
+  vertical-align: super;
+}
+
+/*-----------------*/
+
+/*LISTS*/
+ul {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  line-height: var(--paragraph-line-height);
+  padding-left: 8%;
+  margin-right: 1.1em;
+  text-align: left;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+ul.a {
+  list-style-type: square;
+  padding-left: 8%;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+ul.aa {
+  list-style-type: circle;
+  font-size: 0.9em;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+ol {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  line-height: var(--paragraph-line-height);
+  padding-left: 8%;
+  margin-right: 1.1em;
+  text-align: left;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+ol.b {
+  list-style-type: lower-roman;
+  padding-left: 8%;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+ol.bb {
+  list-style-type: lower-roman;
+  font-size: 0.9em;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+
+/*==Buttons==*/
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  font-weight: 700;
+}
+.buy-button {
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background-color: orange;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+}
+.free-button {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background-color: green;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+}
+.read-button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: rgb(198, 238, 198);
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+/*-----------------*/
+
+/* TABLES */
+table {
+  width: 80%;
+  margin: var(--table-margins);
+  border: 0px solid gray;
+  border-collapse: collapse;
+}
+th {
+  font-style: italic;
+  line-height: 1.2rem;
+  padding-top: 0.5rem;
+  vertical-align: bottom;
+  text-align: center;
+  margin-top: 1rem;
+  border: 0px solid gray;
+  border-collapse: collapse;
+}
+td {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  padding: 0.5rem;
+  border: 0px solid gray;
+  border-collapse: collapse;
+}
+
+/*======================*/
+
+/*Screens wider than 1640px:*/
+@media screen and (min-width: 1640px) {
+	body {
+		margin-left: 33%;
+		margin-right: 33%;
+	}
+}
+/*Screens between 1340px and 1640px:*/
+@media screen and (min-width: 1340px) and (max-width: 1640px) {
+	body {
+		margin-left: 27%;
+		margin-right: 27%;
+	}
+}
+/*Screens between 991px and 1340px:*/
+@media screen and (min-width: 991px) and (max-width: 1340px) {
+	body {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+}
+/*Screens between 991px and 640px:*/
+@media screen and (min-width: 640px) and (max-width: 991px) {
+	body {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	/*h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  */
+	p {
+		font-size: 1.1rem;
+		text-align: justify;
+		line-height: 1.45em;
+	}
+	.container {
+		display: block;
+		hyphens: auto;
+	}
+	.kicker {
+		font-size: 1.3rem;
+		line-height: 1.8rem;
+	}
+	.pullquote {
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+		text-align: left;
+	}
+}
+/*Screen width up to 640px:*/
+@media screen and (max-width: 640px) {
+	body {
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	/*h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  */
+	p {
+		font-size: 0.95rem;
+		text-align: left;
+		line-height: 1.45rem;
+	}
+	.container {
+		display: block;
+		hyphens: none;
+	}
+	.kicker {
+		font-size: 1.3rem;
+		line-height: 1.8rem;
+	}
+	.pullquote {
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+	}
+}
+/* Manjari 
+@font-face {
+	font-family: "Manjari";
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url(../assets/fonts/Manjari-Regular.woff2?v=Version2.000-RC1)
+		format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
+		U+0D01-0D7F, U+200C- U+200D, U+25CC;
+}*/
+/* Manjari Bold
+@font-face {
+	font-family: "Manjari";
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url(../assets/fonts/Manjari-Bold.woff2?v=Version2.000-RC1) format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
+		U+0D01-0D7F, U+200C- U+200D, U+25CC;
+}*/
+/* Manjari Thin
+@font-face {
+	font-family: "Manjari";
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100;
+	src: url(../assets/fonts/Manjari-Thin.woff2?v=Version2.000-RC1) format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
+		U+0D01-0D7F, U+200C- U+200D, U+25CC;
+}*/
+/* @import url('https://smc.org.in/fonts/manjari.css'); 
+	 html { font-family: 'Manjari', sans-serif; } */

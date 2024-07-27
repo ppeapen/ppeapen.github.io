@@ -1,0 +1,125 @@
+.toggle {
+  float: right;
+  margin-top: 12px;
+  margin-right: 80px;
+  z-index: 15;
+}
+/*Toggle checkbox is hidden*/
+.toggle input[type="checkbox"] {
+  display: none;
+}
+/*The label is morphed into switch bay */
+.toggle label {
+  background-color: #0d47a1;
+  border: 2px solid #80d8ff;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  width: 40px;
+  height: 15px;
+}
+/*The "switch" circle*/
+.toggle label::after {
+  background-color: ivory;
+  border-radius: 50%;
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  transition: all ease-in-out 0.3s;
+  width: 10px;
+  height: 10px;
+}
+/*When checked, switch bay changes color*/
+.toggle input[type="checkbox"]:checked ~ label {
+  background-color: #f2f5e6;
+  border-color: orange;
+}
+/*When checked, switch circle changes color*/
+.toggle input[type="checkbox"]:checked ~ label::after {
+  background-color: navy;
+  transform: translateX(24px);
+}
+/*CSS FOR THEME CHANGE*/
+/*Light Theme*/
+body {
+  background: rgb(214, 214, 214);
+  color: rgb(23, 23, 23);
+}
+body.div {
+  background: rgb(214, 214, 214);
+  color: rgb(23, 23, 23);
+}
+body a:link {
+  color: #1624e7;
+}
+body a:visited {
+  color: #c00ba2;
+}
+body .colorfont2 {
+  color: rgb(11, 9, 179);
+}
+body .highlight {
+  color: rgb(114, 5, 5);
+  background-color: rgb(254, 255, 209);
+}
+body .redletter {
+  color: #d40000ff;
+  text-shadow: 0px 0px 0px rgb(0, 0, 0);
+}
+/*Dark Theme*/
+body.dark-theme {
+  background: rgb(31, 31, 31);
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p,
+body.dark-theme pre,
+body.dark-theme ul,
+body.dark-theme ol,
+body.dark-theme .even,
+body.dark-theme .odd,
+body.dark-theme .score-header,
+body.dark-theme figcaption,
+body.dark-theme table td,
+body.dark-theme table th {
+  color: rgb(196, 196, 196);
+}
+body.dark-theme a:link {
+  color: #f5610b;
+}
+body.dark-theme a:visited {
+  color: #f50b78;
+}
+body.dark-theme .colorfont2 {
+  color: rgb(31, 109, 177);
+}
+body.dark-theme .highlight {
+  color: rgb(254, 255, 209);
+  background-color: rgba(114, 5, 5, 0.711);
+}
+body.dark-theme button {
+  color: rgb(254, 255, 209);
+  background-color: rgba(114, 5, 5, 0.711);
+}
+body.dark-theme .box {
+  background-color: rgb(15, 27, 13);
+  color: rgb(214, 214, 214);
+}
+body.dark-theme .redletter {
+  /*background-color: rgba(114, 5, 5, 0.711);*/
+  color: rgb(247, 237, 96);
+  text-shadow: 2px 3px 3px rgb(0, 0, 0);
+}
+body.dark-theme .pullquote {
+  color: rgb(161, 161, 161);
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}

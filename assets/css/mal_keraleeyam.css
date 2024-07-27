@@ -1,0 +1,18 @@
+/* Keraleeyam - for titles, decoration font*/
+/* html { font-family: 'Keraleeyam', sans-serif; } */
+@font-face {
+  font-family: "Keraleeyam";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(../fonts/Keraleeyam-Regular.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
+    U+0D01-0D7F, U+200C- U+200D, U+25CC;
+}
+
+.keraleeyam {
+  font-family: "Keraleeyam", sans-serif;
+}
+/* Keraleeyam 
+	@import url('https://smc.org.in/fonts/keraleeyam.css'); 
+	html { font-family: 'Keraleeyam', sans-serif; } */

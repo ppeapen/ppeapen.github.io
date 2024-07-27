@@ -1,0 +1,498 @@
+@charset "UTF-8";
+@font-face {
+	font-family: "et-book";
+	src: url("../fonts/et-book-roman-line-figures.woff") format("woff"),
+		url("../fonts/et-book-roman-line-figures.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "et-book";
+	src: url("../fonts/et-book-display-italic-old-style-figures.woff")
+			format("woff"),
+		url("../fonts/et-book-display-italic-old-style-figures.ttf")
+			format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "et-book";
+	src: url("../fonts/et-book-bold-line-figures.woff") format("woff"),
+		url("../fonts/et-book-bold-line-figures.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Bona Nova";
+	src: url("../fonts/BonaNova-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Bona Nova";
+	src: url("../fonts/BonaNova-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Bona Nova";
+	src: url("../fonts/BonaNova-Italic.ttf") format("truetype");
+	font-weight: italic;
+	font-style: normal;
+}
+:root {
+	--paragraph-margins: 0.7rem 0rem 0.7rem 0rem;
+	--paraline-height: 1.416rem;
+	--paratext-indent: 0.9em;
+	--pullquote-margins: 1rem 0rem 1rem 0rem;
+}
+html {
+	font-size: 21px;
+}
+body {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "et-book", serif;
+	background-color: #fffff8;
+	color: #111;
+	max-width: 1340px;
+}
+/*=========LINKS===========*/
+a:link {
+	color: #0615c7;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:visited {
+	color: #ca118d;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:hover {
+	color: #e3313d;
+	background-color: transparent;
+	text-decoration: underline;
+}
+a:active {
+	color: #ff0000;
+	background-color: transparent;
+	text-decoration: underline;
+}
+/*=========IAMGES===========*/
+
+figure {
+	max-width: 95%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+a img {
+	border: 0 none;
+}
+.image-link {
+	background-color: transparent;
+	background: none;
+	text-decoration: none;
+	border-bottom: none;
+}
+iframe {
+	margin: 0 auto;
+	background-color: white;
+	display: block;
+	border-style: none;
+}
+article {
+	position: relative;
+	padding: 1.416rem 0rem;
+}
+
+section {
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
+}
+/*=========RULE===========*/
+hr {
+	width: 30%;
+	margin-bottom: 4.95em;
+	margin-top: 2.2em;
+}
+/*=========CONTAINER FOR HYPHENATOR===========*/
+.container {
+	display: block;
+	hyphens: auto;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+}
+/*=========HEADINGS===========*/
+h1 {
+	font-weight: 400;
+	margin: 2.83rem 0rem 1.06rem 0rem;
+	font-size: 2.266rem;
+	line-height: 2.28rem;
+}
+h2 {
+	font-style: italic;
+	font-weight: 400;
+	margin-top: 1.558rem;
+	font-size: 1.558rem;
+	line-height: 1.7rem;
+}
+h3 {
+	font-style: italic;
+	font-weight: 400;
+	font-size: 1.204rem;
+	margin-top: 2rem;
+	line-height: 1.3rem;
+}
+h4 {
+	font-style: italic;
+	font-weight: 400;
+	font-size: 1.06rem;
+	margin-top: 1.416rem;
+	line-height: 1.15rem;
+}
+.title {
+	font-size: 2.266rem;
+	text-align: center;
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 2.408rem;
+}
+.subtitle {
+	display: block;
+	font-size: 1.275rem;
+	font-style: normal;
+	text-align: center;
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 1.416rem; /*fallback for IE*/
+	line-height: var(--paraline-height);
+}
+.authorname {
+  font-weight: 700;
+  display: block;
+  font-size: 1.275rem;
+  font-style: normal;
+  text-align: center;
+  text-indent: 0rem;
+  margin: 2rem 0rem 3rem 0rem; /*fallback for IE*/
+  margin: var(--heading-margins-h1);
+  line-height: 2.408rem; /*fallback for IE*/
+  line-height: var(--heading-margins-h1);
+}
+.kicker {
+	font-size: 1.133rem;
+	font-weight: 700;
+	line-height: 130%;
+	padding: 1em 0em 1em 0em;
+}
+.pullquote {
+	font-size: 1.275rem;
+	font-weight: 700;
+	line-height: 130%;
+	margin: 1em 0em 1em 0em; /*fallback for IE*/
+	margin: var(--pullquote-margins);
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	padding: 0.495rem 1.06rem 0.495rem 1.06rem;
+}
+/*=========TEXT===========*/
+p {
+	font-size: 1rem;
+	vertical-align: baseline;
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 1.416rem; /*fallback for IE*/
+	line-height: var(--paraline-height);
+}
+.centered {
+  text-align: center;
+  text-indent: 0rem;
+}
+.noindent {
+  text-indent: 0rem;
+}
+.firstpara {
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 1.416rem; /*fallback for IE*/
+	line-height: var(--paraline-height);
+}
+.firstlineindent {
+	text-indent: 0.9em; /*fallback for IE*/
+	text-indent: var(--paratext-indent);
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 1.416rem; /*fallback for IE*/
+	line-height: var(--paraline-height);
+}
+.lastpara {
+	text-indent: 0.9em; /*fallback for IE*/
+	text-indent: var(--paratext-indent);
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 1.416rem; /*fallback for IE*/
+	line-height: var(--paraline-height);
+}
+.indented {
+	font-size: 0.921rem;
+	text-align: left;
+	padding-left: 5%;
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 1.416rem; /*fallback for IE*/
+	line-height: var(--paraline-height);
+}
+.quotation {
+	font-size: 0.921rem;
+	padding-left: 6%;
+	padding-right: 5%;
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 1.275rem;
+}
+blockquote {
+	font-size: 1.2rem;
+}
+.note {
+	font-size: 0.85rem;
+	margin-bottom: 0.7em;
+	line-height: 1.06rem;
+}
+.notes {
+	font-size: 0.7rem;
+	line-height: 0.85rem;
+}
+/*==FOOTNOTE REFERENCE==*/
+.noteref {
+	font-size: 60%;
+	position: relative;
+	top: -0.5em;
+	text-decoration: none;
+}
+/*==FOOTNOTES==*/
+.footnote {
+	text-indent: -5%;
+	padding-left: 5%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	line-height: 1.1rem;
+}
+/*==FOR BIBLIOGRAPHY==*/
+.hangingindent {
+	padding-left: 40px;
+	text-indent: -40px;
+	margin-top: 0.7rem;
+	margin-bottom: 0.7rem;
+	line-height: 1.416rem;
+}
+/*==IMAGE CAPTIONS==*/
+.caption {
+	font-size: 0.85rem;
+	font-style: italic;
+	text-align: center;
+	margin: 0.7em 0em 0.7em 0em; /*fallback for IE*/
+	margin: var(--paragraph-margins);
+	line-height: 0.99rem;
+}
+/*========SPECIAL STYLES==========*/
+.dropcap {
+	font-size: 2.83rem;
+	float: left;
+	position: relative;
+	top: 0.94rem;
+	margin-bottom: 0.3em;
+	padding-left: 0px;
+	padding-right: 5px;
+}
+.smallcaps {
+	font-size: 1.1em;
+	font-style: regular;
+	font-variant: all-small-caps;
+}
+.emphasis {
+	font-style: italic;
+}
+.redletter {
+  color: #d40000ff;
+}
+.highlight {
+  color: rgb(114, 5, 5);
+  background-color: rgb(254, 255, 209);
+}
+.colorfont1 {
+  color: rgba(211, 9, 103, 0.822);
+}
+.colorfont2 {
+  color: rgba(7, 25, 189, 0.822);
+}
+.backtotop {
+	font-size: 0.85rem;
+	margin-bottom: 0.7em;
+	text-align: right;
+}
+/*========Table of Contents==========*/
+.content-list {
+	font-size: 0.99rem;
+	text-align: left;
+	margin-top: 0.7rem;
+	margin-bottom: 0.7rem;
+	padding-left: 20px;
+}
+/*========LISTS==========*/
+ul,
+ol {
+	font-size: 0.99rem;
+	font-weight: 400;
+	text-align: left;
+	line-height: 1.416rem;
+	margin-left: 9%;
+	margin-top: 0.35em;
+	margin-bottom: 1em;
+	padding-left: 1%;
+}
+ul.a {
+	font-size: 0.921rem;
+	list-style-type: square;
+}
+ul.aa {
+	font-size: 0.9em;
+	list-style-type: circle;
+}
+ol.b {
+	list-style-type: lower-roman;
+	font-size: 0.921rem;
+}
+ol.bb {
+	font-size: 0.9em;
+}
+.dl {
+	display: block;
+	font-size: 1em;
+	margin-top: 0em;
+	margin-bottom: 0.7em;
+	width: 60%;
+}
+/*========TABLE==========*/
+table {
+	width: 90%;
+}
+table,
+th,
+td {
+	border: 0px solid gray;
+	border-collapse: collapse;
+}
+td {
+	padding: 10px;
+	font-size: 0.9em;
+	margin-bottom: 0.7em;
+}
+th {
+	padding: 5px;
+	font-size: 1em;
+	font-style: normal;
+	line-height: 160%;
+	vertical-align: bottom;
+	margin-top: 1.2em;
+	margin-bottom: 0em;
+}
+/*===========Malayalam==============*/
+.manjari {
+	font-family: "Manjari", sans-serif;
+}
+.gayathri {
+	font-family: "Gayathri", sans-serif;
+}
+.baloo {
+	font-family: "Baloo Chettan 2", sans-serif;
+}
+.chilanka {
+	font-family: "Chilanka", cursive;
+}
+/*===========Hebrew and Greek==============*/
+.hebrew {
+	font-family: "Bona Nova", serif;
+}
+.gk {
+	font-family: "Bona Nova", serif;
+}
+/*Top Bar - when position is fixed, top, left and right values determine position in the view port*/
+.top-bar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 45px;
+  background-color: rgb(145, 0, 72);
+  box-shadow: #575757;
+  z-index: 8;
+}
+/*for one-sided shadow under the top bar*/
+.one-edge-shadow {
+  -webkit-box-shadow: 0 8px 6px -6px rgb(58, 58, 58);
+  -moz-box-shadow: 0 8px 6px -6px rgb(59, 59, 59);
+  box-shadow: 0 8px 6px -6px rgb(58, 58, 58);
+}
+.logo {
+  width: 100px;
+  margin: 5px 0px 0px 5px;
+  float: none; /*float with position and display keeps the logo locked in position*/
+  position: fixed;
+  left: 2px;
+  top: 2px;
+  display: block;
+  z-index: 10;
+}
+/*=========RESPONSIVE DESIGN============*/
+
+/*Screens wider than 1640px:*/
+@media screen and (min-width: 1640px) {
+	body {
+		margin-left: 30%;
+		margin-right: 30%;
+	}
+}
+/*Screens between 1340px and 1640px:*/
+@media screen and (min-width: 1340px) and (max-width: 1640px) {
+	body {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+}
+/*Screens between 991px and 1340px:*/
+@media screen and (min-width: 991px) and (max-width: 1340px) {
+	body {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	.pullquote {
+		font-size: 1.204rem;
+	}
+}
+/*Screens between 991px and 640px:*/
+@media screen and (min-width: 640px) and (max-width: 991px) {
+	body {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	.pullquote {
+		font-size: 1.133rem;
+	}
+}
+/*Screen width up to 640px:*/
+@media screen and (max-width: 640px) {
+	body {
+		margin-left: 6%;
+		margin-right: 6%;
+	}
+	.pullquote {
+		font-size: 1.06rem;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}

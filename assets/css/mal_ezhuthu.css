@@ -1,0 +1,12 @@
+/* Ezhuthu from RIT - script font*/
+/* html { font-family: 'Ezhuthu', sans-serif; }*/
+@font-face {
+  font-family: "Ezhuthu";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(../fonts/Ezhuthu-Regular.woff2) format("woff2");
+}
+.ezhuthu {
+  font-family: "Ezhuthu", sans-serif;
+}
