@@ -1,10 +1,10 @@
 ---
-title: Summary Blessing Or Curse
+title: Blessing Or Curse
 author: Philip Eapen
 date: September 1, 2010
-description: Intro the Derek Prince's book - Blessing or Curse - You Can Choose
+description: Summary of Derek Prince's book – Blessing or Curse, You Can Choose
 og-image-url: https://www.myjewishlearning.com/wp-content/uploads/2003/02/blessing-and-curse.jpg
-canonical:
+canonical: https://philipeapen.com/articles/review_blessing-or-curse.html
 html:
   embed_local_images: false
   embed_svg: true
